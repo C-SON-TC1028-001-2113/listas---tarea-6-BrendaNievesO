@@ -1,22 +1,22 @@
 
 def main():
     lista=[0,1]
-    a=0
-    b=1
-    v=int(input(''))
-    c=v-2
-    if v==1:
-        lista.remove(1)
-        print(lista)
-    if v==2:
-        print(lista)
-    if v>2:
-        for x in range(c):
-            lista.append(a+b)
-            s=a+b
-            a=b
-            b=s
-        print(lista)
+    l=[]
+    l1=[0]
+    a=-1
+    while a<0:
+        a=int(input(''))
+        if a==0:
+            print(l)
+        elif a>0:
+            if a==1:
+                print(l1)
+            elif a==2:
+                print(lista)
+            elif a>2:
+                for x in range(a-2):
+                    lista.append(lista[x]+lista[x+1])
+                print(lista)
 
 if __name__=='__main__':
     main()
